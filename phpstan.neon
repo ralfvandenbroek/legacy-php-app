@@ -1,9 +1,10 @@
 parameters:
     # Définition du niveau de qualité
     level: 1
-	# Exclusions
+    # Exclusions
     excludePaths:
         - vendor
+        - tools
     # Inclusions
     paths:
-    	- .
+        - .
