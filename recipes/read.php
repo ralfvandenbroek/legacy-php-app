@@ -6,11 +6,10 @@ include_once('./../config/user.php');
 include_once('./../variables.php');
 
 $getData = $_GET;
-if (!isset($getData['id']) && is_numeric($getData['id']))
-{
-	echo('La recette n\'existe pas');
+if (!isset($getData['id']) && is_numeric($getData['id'])) {
+    echo('La recette n\'existe pas');
     return;
-}	
+}
 
 $recipeId = $getData['id'];
 
@@ -37,7 +36,7 @@ $recipe = [
     'rating' => $averageRating['rating'],
 ];
 
-foreach($recipeWithComments as $comment) {
+foreach ($recipeWithComments as $comment) {
     if (!is_null($comment['comment_id'])) {
         $recipe['comments'][] = [
             'comment_id' => $comment['comment_id'],
@@ -76,11 +75,11 @@ foreach($recipeWithComments as $comment) {
             </aside>
         </div>
 
-        <?php if(count($recipe['comments']) > 0): ?>
+        <?php if (count($recipe['comments']) > 0): ?>
         <hr />
         <h2>Commentaires</h2>
         <div class="row">
-            <?php foreach($recipe['comments'] as $comment): ?>
+            <?php foreach ($recipe['comments'] as $comment): ?>
                 <div class="comment">
                     <p><?php echo($comment['created_at']); ?></p>
                     <p><?php echo($comment['comment']); ?></p>

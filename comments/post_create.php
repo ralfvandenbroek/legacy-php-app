@@ -14,9 +14,8 @@ if (
     !isset($postData['review']) &&
     !is_numeric($postData['review']) &&
     !is_numeric($postData['recipe_id'])
-    )
-{
-	echo('Le commentaire est invalide.');
+    ) {
+    echo('Le commentaire est invalide.');
     return;
 }
 

@@ -1,7 +1,7 @@
 <?php
     include_once('config/mysql.php');
     include_once('variables.php');
-    include_once('functions.php');  
+    include_once('functions.php');
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,7 +18,7 @@
         <li class="nav-item">
           <a class="nav-link" href="<?php echo($rootUrl). 'contact.php'; ?>">Contact</a>
         </li>
-        <?php if(isset($loggedUser)) : ?>
+        <?php if (isset($loggedUser)) : ?>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo($rootUrl). 'recipes/create.php'; ?>">Ajoutez une recette !</a>
         </li>

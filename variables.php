@@ -9,7 +9,7 @@ $recipesStatement = $mysqlClient->prepare('SELECT * FROM recipes WHERE is_enable
 $recipesStatement->execute();
 $recipes = $recipesStatement->fetchAll();
 
-if(isset($_GET['limit']) && is_numeric($_GET['limit'])) {
+if (isset($_GET['limit']) && is_numeric($_GET['limit'])) {
     $limit = (int) $_GET['limit'];
 } else {
     $limit = 100;

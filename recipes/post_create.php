@@ -8,13 +8,12 @@ include_once('./../variables.php');
 $postData = $_POST;
 
 if (
-    !isset($postData['title']) 
+    !isset($postData['title'])
     || !isset($postData['recipe'])
-    )
-{
-	echo('Il faut un titre et une recette pour soumettre le formulaire.');
+    ) {
+    echo('Il faut un titre et une recette pour soumettre le formulaire.');
     return;
-}	
+}
 
 $title = $postData['title'];
 $recipe = $postData['recipe'];

@@ -9,13 +9,12 @@ $postData = $_POST;
 
 if (
     !isset($postData['id'])
-    || !isset($postData['title']) 
+    || !isset($postData['title'])
     || !isset($postData['recipe'])
-    )
-{
-	echo('Il manque des informations pour permettre l\'édition du formulaire.');
+    ) {
+    echo('Il manque des informations pour permettre l\'édition du formulaire.');
     return;
-}	
+}
 
 $id = $postData['id'];
 $title = $postData['title'];

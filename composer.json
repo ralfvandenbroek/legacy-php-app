@@ -1,5 +1,16 @@
 {
     "require-dev": {
         "phpstan/phpstan": "^1.1"
+    },
+    "scripts": {
+        "cs-fix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix .",
+        "check-quality": [
+            "@composer cs-fix",
+            "vendor/bin/phpstan"
+        ]
+    },
+    "scripts-descriptions": {
+        "cs-fix": "Exécute PHP-CS-Fixer dans le projet et corriges les erreurs",
+        "check-quality": "Exécutes tous les tests de qualité de code"
     }
 }

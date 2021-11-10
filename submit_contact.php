@@ -3,11 +3,10 @@ session_start();
 
 $postData = $_POST;
 
-if (!isset($postData['email']) || !isset($postData['message']))
-{
-	echo('Il faut un email et un message pour soumettre le formulaire.');
+if (!isset($postData['email']) || !isset($postData['message'])) {
+    echo('Il faut un email et un message pour soumettre le formulaire.');
     return;
-}	
+}
 
 $email = $postData['email'];
 $message = $postData['message'];

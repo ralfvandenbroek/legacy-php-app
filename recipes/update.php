@@ -5,11 +5,10 @@
 
 $getData = $_GET;
 
-if (!isset($getData['id']) && is_numeric($getData['id']))
-{
-	echo('Il faut un identifiant de recette pour le modifier.');
+if (!isset($getData['id']) && is_numeric($getData['id'])) {
+    echo('Il faut un identifiant de recette pour le modifier.');
     return;
-}	
+}
 
 $retrieveRecipeStatement = $mysqlClient->prepare('SELECT * FROM recipes WHERE recipe_id = :id');
 $retrieveRecipeStatement->execute([

@@ -27,7 +27,8 @@ if (isset($postData['email']) &&  isset($postData['password'])) {
 
             $_SESSION['LOGGED_USER'] = $loggedUser['email'];
         } else {
-            $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identifier : (%s/%s)',
+            $errorMessage = sprintf(
+                'Les informations envoyées ne permettent pas de vous identifier : (%s/%s)',
                 $postData['email'],
                 $postData['password']
             );
@@ -43,9 +44,9 @@ if (isset($_COOKIE['LOGGED_USER']) || isset($_SESSION['LOGGED_USER'])) {
 }
 ?>
 
-<?php if(!isset($loggedUser)): ?>
+<?php if (!isset($loggedUser)): ?>
 <form action="home.php" method="post">
-    <?php if(isset($errorMessage)) : ?>
+    <?php if (isset($errorMessage)) : ?>
         <div class="alert alert-danger" role="alert">
             <?php echo($errorMessage); ?>
         </div>
